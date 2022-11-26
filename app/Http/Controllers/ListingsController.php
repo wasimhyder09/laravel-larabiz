@@ -107,6 +107,12 @@ class ListingsController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function destroy($id) {
-    //
+    Listing::find($id)->delete();
+    return redirect('dashboard')->with('success', 'Listing deleted successfully!');
+  }
+
+  public function delete($id) {
+    $listing = Listing::find($id);
+    return view('listings.delete')->with('listing', $listing);
   }
 }
