@@ -12,7 +12,8 @@ class ListingsController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function index() {
-    //
+    $listing = Listing::all();
+    return view('listings.index')->with('listings', $listing);
   }
 
   /**
@@ -58,7 +59,8 @@ class ListingsController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function show($id) {
-    //
+    $listing = Listing::find($id);
+    return view('listings.show')->with('listing', $listing);
   }
 
   /**
