@@ -11,8 +11,13 @@ class ListingsController extends Controller {
    *
    * @return \Illuminate\Http\Response
    */
+
+  public function __construct() {
+    $this->middleware('auth', ['except' => ['index', 'show']]);
+  }
+
   public function index() {
-    $listing = Listing::all();
+    $listing = Listing::orderBy('created_at', 'desc')->get();
     return view('listings.index')->with('listings', $listing);
   }
 

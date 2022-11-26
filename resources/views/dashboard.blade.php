@@ -16,7 +16,7 @@
             <table class="table table-striped">
               <tr>
                 <th>Company</th>
-                <th></th>
+                <th><span class="float-end">Actions</span></th>
                 <th></th>
               </tr>
               @foreach ($listings as $listing)
