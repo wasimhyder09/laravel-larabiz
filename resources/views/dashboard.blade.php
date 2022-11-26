@@ -22,8 +22,8 @@
               @foreach ($listings as $listing)
                 <tr>
                   <td>{{ $listing->name }}</td>
-                  <td></td>
-                  <td></td>
+                  <td><a href="/listings/{{ $listing->id }}/edit" class="btn btn-secondary btn-sm float-end">Edit</a></td>
+                  <td><a href="/listings/{{ $listing->id }}/delete" class="btn btn-danger btn-sm float-start">Delete</a></td>
                 </tr>
               @endforeach
             </table>
