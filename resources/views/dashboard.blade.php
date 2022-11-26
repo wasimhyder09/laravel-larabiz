@@ -4,7 +4,7 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="card">
-        <div class="card-header">{{ __('Dashboard') }}</div>
+        <div class="card-header">{{ __('Dashboard') }} <span class="float-end"><a href="/listings/create" class="btn btn-success btn-sm">Add listing</a></span></div>
         <div class="card-body">
           @if (session('status'))
             <div class="alert alert-success" role="alert">
